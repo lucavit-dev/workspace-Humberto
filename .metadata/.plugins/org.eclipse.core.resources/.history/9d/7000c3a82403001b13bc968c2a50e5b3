@@ -1,0 +1,28 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class DesafioRepeticao {
+
+	public static void main(String[] args) {
+		
+		int numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o número"));
+		int chute = 0;
+		do {
+			chute = Integer.parseInt(JOptionPane.showInputDialog("Digite o número a ser descoberto")); 
+		}while(numero!=chute);
+		System.out.println("Parabéns você acertou!");
+		/*
+		 * Jogador 1: vai digitar um número inteiro
+		 * Jogador 2: tem que descobrir esse numero
+		 * Exibir o Parabéns para o Jogador2 quando ele descobrir
+		 * Atualizações:
+		 * - o jogador2 irá receber dicas enquanto ele não acertar
+		 * - no final tem que exibir qtas tentativas foram utilizadas pelo Jogador2
+		 */
+		
+		//(x != y)
+
+	}
+
+}

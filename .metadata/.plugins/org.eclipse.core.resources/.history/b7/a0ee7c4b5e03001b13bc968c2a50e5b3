@@ -1,0 +1,36 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class ExercicioGeral {
+
+	public static void main(String[] args) {
+		String nome="";
+		int idade=0;
+		char resposta=0;
+		int qtdeMaiores=0;
+		do {
+			nome=JOptionPane.showInputDialog("Nome").toUpperCase();
+			idade=Integer.parseInt(JOptionPane.showInputDialog("Idade"));
+			if (idade>17) {
+				qtdeMaiores++;
+			}
+			
+			
+			resposta = JOptionPane.showInputDialog("Digite <S> para continuar").toUpperCase().charAt(0);
+		}while(resposta=='S');
+
+		System.out.println("Qtde de Pessoas maiores de idade: " + qtdeMaiores);
+		
+		/*
+ * A aplicação deverá exibir:
+ * - a pessoa mais velha (nome), (3)
+ * - a pessoa mais nova (nome), (4)
+ * - a quantidade de pessoas maiores de idade e (1)
+ * - a média entre as idades que foram digitadas. (2)
+ */
+		 
+		
+	}
+
+}

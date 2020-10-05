@@ -1,0 +1,10 @@
+package br.com.universidade.implementacao;
+
+import br.com.universidade.modelo.Aluno;
+
+public class TestePackage {
+public static void main(String[] args) {
+	Aluno a = new Aluno();
+	a.rm = 1; 
+}
+}

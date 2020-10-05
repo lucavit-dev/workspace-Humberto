@@ -1,0 +1,57 @@
+package br.com.ecommerce.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.ecommerce.beans.Cliente;
+import br.com.ecommerce.beans.Endereco;
+import br.com.ecommerce.beans.Produto;
+import br.com.ecommerce.beans.Venda;
+
+public class ImplementarVenda {
+
+	public static float f(String msg) {
+		return Float.parseFloat(s(msg));
+	}
+	
+	public static int i(String msg) {
+		return Integer.parseInt(s(msg));
+	}
+	
+	public static String s(String msg) {
+		return JOptionPane.showInputDialog(msg).toUpperCase();
+	}
+	
+	public static void main(String[] args) {
+	
+		Venda venda = new Venda();
+		Cliente cliente = new Cliente();
+		Endereco endereco = new Endereco();
+		Produto produto = new Produto();
+		//faz a amarração(ligação)
+		cliente.setEndereco(endereco);
+		venda.setProduto(produto);
+		venda.setCliente(cliente);
+		// fim da amarração
+		
+		endereco.setBairro(s("Bairro"));
+		endereco.setLogradouro(s("Logradouro"));
+		endereco.setCep(s("CEP"));
+		//preencheria todos de endereco
+		
+		cliente.setId(i("ID"));
+		cliente.setNome(s("Nome"));
+		
+		produto.setDescricao("CHURROS");
+		produto.setQtde(i("Qtde"));
+		produto.setValorVenda(f("Valor Venda"));
+		// preencheria todos de produto
+		
+		venda.setTotal(150);
+		venda.setData("02/10/2020");
+		venda.setNotafiscal(15);
+		System.out.println(venda.getAll());
+		
+		
+	}
+
+}
